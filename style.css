@@ -9,7 +9,7 @@
   --brown: #2b1b12;
   --body: #fef7f2;
   --nav: #ddc7bb;
-
+  --secction-body: #ffffff;
   --header-height: 80px;
 }
 
@@ -26,6 +26,8 @@ a {
 }
 p {
   line-height: 1.5;
+}
+.hero p {
   padding-block: 1em;
 }
 
@@ -51,6 +53,7 @@ nav {
 }
 
 .header-wrapper {
+  color: var(--brown);
   display: flex;
   flex-direction: row;
   gap: 1.5em;
@@ -90,6 +93,7 @@ nav a {
   align-items: center;
   justify-content: center;
   background-color: var(--body);
+  color: var(--brown);
 }
 .hero h1 {
   font-size: clamp(1.5rem, 5vw, 3rem);
@@ -99,6 +103,52 @@ nav a {
 }
 .hero-text-wrapper {
   padding-inline: 2em;
+}
+
+.second-section {
+  text-align: center;
+  color: var(--brown);
+}
+
+.section-text-wrapper {
+  padding: 1.5em;
+}
+.section-text-wrapper > :nth-child(2) {
+  padding-block: 1em;
+}
+.houses-number-wrapper {
+  display: flex;
+  justify-content: space-between;
+}
+
+.why-choose-us {
+  text-align: center;
+  padding: 2em;
+  color: var(--brown);
+}
+.why-choose-offers {
+  display: flex;
+  flex-direction: column;
+}
+
+.card {
+  background-color: var(--nav);
+  min-width: 100px;
+  margin-block: 1em;
+  padding: 1.5em;
+  border-radius: 0.5rem;
+}
+.card img {
+  background-color: white;
+  border-radius: 0.5rem;
+  padding: 1em;
+}
+.card h3,
+.why-choose-text h2 {
+  padding-block: 5px;
+}
+.why-choose-us h3 {
+  font-size: clamp(0.8rem, 2vw, 3rem);
 }
 
 @media (min-width: 32em) {
@@ -134,10 +184,28 @@ nav a {
     flex-direction: row;
     padding-inline: clamp(1em, 2vw, 2em);
   }
-  .hero img {
+  .hero img,
+  .second-section img {
     min-width: 50%;
   }
   .hero-text-wrapper {
     text-align: start;
+  }
+  /* second section */
+  .second-section {
+    display: flex;
+    flex-direction: row-reverse;
+    padding: 1.5em;
+  }
+
+  .section-text-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .why-choose-offers {
+    display: flex;
+    flex-direction: row;
+    gap: 1em;
   }
 }
