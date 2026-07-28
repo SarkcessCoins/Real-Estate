@@ -9,7 +9,10 @@
   --brown: #2b1b12;
   --body: #fef7f2;
   --nav: #ddc7bb;
+
+  --header-height: 80px;
 }
+
 img {
   max-width: 100%;
   height: auto;
@@ -21,14 +24,19 @@ ul li {
 a {
   text-decoration: none;
 }
+p {
+  line-height: 1.5;
+  padding-block: 1em;
+}
 
 header {
   display: flex;
   flex-direction: row;
+  align-items: center;
   justify-content: space-between;
   padding: 1em;
-  background-color: var(--body);
-  min-height: 5svh;
+  background-color: transparent;
+  height: var(--header-height);
 }
 nav {
   min-height: 100svh;
@@ -48,7 +56,7 @@ nav {
   gap: 1.5em;
   align-items: start;
 }
-.menu {
+.hamburger {
   border: none;
   background-color: transparent;
 }
@@ -65,14 +73,35 @@ nav a {
   font-weight: bold;
   font-size: clamp(1rem, 5vw, 1.2rem);
 }
-.contact-btn {
-  padding: 0.5em;
+.contact-btn,
+.hero button {
+  padding-block: 0.5em;
+  padding-inline: 0.9em;
   border-radius: 8px;
   background-color: var(--brown);
   color: white;
 }
 
-@media (min-width: 30em) {
+.hero {
+  min-height: calc(100svh - var(--header-height));
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--body);
+}
+.hero h1 {
+  font-size: clamp(1.5rem, 5vw, 3rem);
+}
+.hero img {
+  padding-top: 2em;
+}
+.hero-text-wrapper {
+  padding-inline: 2em;
+}
+
+@media (min-width: 32em) {
   header .menu {
     display: none;
   }
@@ -99,5 +128,16 @@ nav a {
     align-items: center;
     flex-direction: row;
     margin: 0;
+  }
+
+  .hero {
+    flex-direction: row;
+    padding-inline: clamp(1em, 2vw, 2em);
+  }
+  .hero img {
+    min-width: 50%;
+  }
+  .hero-text-wrapper {
+    text-align: start;
   }
 }
