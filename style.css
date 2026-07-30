@@ -10,6 +10,8 @@
   --body: #fef7f2;
   --nav: #ddc7bb;
   --secction-body: #ffffff;
+
+  /* height */
   --header-height: 80px;
 }
 
@@ -77,8 +79,7 @@ nav a {
   font-weight: bold;
   font-size: clamp(1rem, 5vw, 1.2rem);
 }
-.contact-btn,
-.hero button {
+.primary-cta {
   padding-block: 0.5em;
   padding-inline: 0.9em;
   border-radius: 8px;
@@ -152,16 +153,59 @@ nav a {
   font-size: clamp(0.8rem, 2vw, 3rem);
 }
 
+.residence-wrapper {
+  display: flex;
+  flex-direction: column;
+  padding: 1.5em;
+  gap: 2em;
+}
+.residence-details img {
+  min-width: 20px;
+  height: auto;
+}
+
+.residence h2 {
+  color: var(--brown);
+  text-align: center;
+}
+.residence-content-wrapper {
+  border-bottom: 2px solid black;
+}
+
+.residence-content-wrapper img {
+  border-radius: 1em;
+}
+
+.residence-details {
+  padding-top: 0.5em;
+}
+
+.residence-details div {
+  display: flex;
+  flex-direction: row;
+}
+.residence-details_locaion img {
+  padding-inline-end: 1em;
+}
+.residence-details_price,
+.residence-details_rooms {
+  display: flex;
+  justify-content: space-between;
+}
+.residence-details_rooms {
+  padding-block: 0.9em;
+}
+
 @media (min-width: 32em) {
   header .menu {
     display: none;
   }
 
   nav {
-    min-height: fit-content;
+    min-height: fit;
     position: relative;
     padding: 0;
-    width: fit-content;
+    width: fit;
     z-index: 0;
     display: flex;
     background-color: transparent;
@@ -206,6 +250,12 @@ nav a {
     justify-content: center;
   }
   .why-choose-offers {
+    display: flex;
+    flex-direction: row;
+    gap: 1em;
+  }
+
+  .residence-wrapper {
     display: flex;
     flex-direction: row;
     gap: 1em;
