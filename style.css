@@ -48,8 +48,9 @@ nav {
   background-color: var(--nav);
   padding: 1em;
   width: 60svw;
+  transform: translateX(-60vw);
   z-index: 1000;
-  display: none;
+  transition: ease-in-out 1s;
 }
 
 .header-wrapper {
@@ -164,6 +165,7 @@ nav a {
     z-index: 0;
     display: flex;
     background-color: transparent;
+    transform: translateX(0vw);
   }
   nav a {
     font-size: clamp(1rem, 2vw, 1.2rem);
@@ -208,4 +210,9 @@ nav a {
     flex-direction: row;
     gap: 1em;
   }
+}
+
+/* js style */
+.navigation-opened {
+  transform: translateX(0vw);
 }
