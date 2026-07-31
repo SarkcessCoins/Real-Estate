@@ -8,7 +8,7 @@
   /* primary colors */
   --brown: #2b1b12;
   --body: #fef7f2;
-  --nav: #ddc7bb;
+  --light-brown: #ddc7bb;
   --secction-body: #ffffff;
 
   /* height */
@@ -47,7 +47,7 @@ nav {
   position: absolute;
   top: 0;
   left: 0;
-  background-color: var(--nav);
+  background-color: var(--light-brown);
   padding: 1em;
   width: 60svw;
   transform: translateX(-60vw);
@@ -128,14 +128,14 @@ nav a {
   color: var(--brown);
 }
 .why-choose-offers {
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 1em;
+  padding-block-start: 1.5em;
 }
 
 .card {
-  background-color: var(--nav);
-  min-width: 100px;
-  margin-block: 1em;
+  background-color: var(--light-brown);
   padding: 1.5em;
   border-radius: 0.5rem;
 }
@@ -153,14 +153,17 @@ nav a {
 }
 
 .residence-wrapper {
-  display: flex;
-  flex-direction: column;
-  padding: 1.5em;
-  gap: 2em;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 1em;
+  padding: 1em;
 }
 .residence-details img {
   min-width: 20px;
   height: auto;
+}
+.residence-content-wrapper img {
+  border-radius: 1em;
 }
 
 .residence h2 {
@@ -168,11 +171,9 @@ nav a {
   text-align: center;
 }
 .residence-content-wrapper {
+  display: flex;
+  flex-direction: column;
   border-bottom: 2px solid black;
-}
-
-.residence-content-wrapper img {
-  border-radius: 1em;
 }
 
 .residence-details {
@@ -188,11 +189,8 @@ nav a {
 }
 .residence-details_price,
 .residence-details_rooms {
-  display: flex;
-  justify-content: space-between;
-}
-.residence-details_rooms {
   padding-block: 0.9em;
+  justify-content: space-between;
 }
 
 @media (min-width: 32em) {
@@ -215,15 +213,15 @@ nav a {
     font-size: clamp(1rem, 2vw, 1.2rem);
     padding-inline: clamp(1em, 3vw, 2em);
   }
-  ul li {
-    margin: 0em;
+  ul li,
+  nav ul {
+    margin: 0;
   }
 
   nav ul {
     display: flex;
     align-items: center;
     flex-direction: row;
-    margin: 0;
     padding: 0;
     gap: 0;
   }
@@ -250,17 +248,6 @@ nav a {
     display: flex;
     flex-direction: column;
     justify-content: center;
-  }
-  .why-choose-offers {
-    display: flex;
-    flex-direction: row;
-    gap: 1em;
-  }
-
-  .residence-wrapper {
-    display: flex;
-    flex-direction: row;
-    gap: 1em;
   }
 }
 

@@ -29,3 +29,12 @@ i check to make sure what was clicked is not the buttons && that the nav is now 
 before checking if the body was clicked to close it
 
 By doing so if i click the openNav to open the navigation the first if statement in the bodyClicked if false so it does not run
+
+2
+---used grid rather than flex. with grid the boxes(content) gets to remain the same size together and fill the container rather than flex-box where i get to use media qurries. and this is nice for when i get to add more contrnt on the container (scalability): also helped in reduced amount of code written
+.residence-wrapper {
+display: grid;
+grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+gap: 1em;
+padding: 1em;
+}
