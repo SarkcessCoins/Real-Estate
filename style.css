@@ -17,6 +17,12 @@
 html {
   scroll-behavior: smooth;
 }
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100svw;
+}
 
 img {
   max-width: 100%;
@@ -230,7 +236,7 @@ h2 {
 }
 .client-ratings {
   background-color: white;
-  padding: 5px;
+  padding: 3px;
 }
 .client-profile {
   display: flex;

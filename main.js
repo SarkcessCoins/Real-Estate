@@ -3,6 +3,8 @@ const openNav = document.getElementById("open-nav");
 const closeNav = document.getElementById("close-nav");
 const navigationItem = document.getElementById("navigation-item");
 const notmobile = window.matchMedia("(min-width:32em)");
+const navLink = navigationItem.querySelectorAll("li");
+console.log(navLink);
 
 function navAction(e) {
   if (openNav.contains(e.target) || closeNav.contains(e.target)) {
@@ -17,6 +19,13 @@ function bodyClicked(e) {
       removeMobileNav();
     }
   }
+}
+function clickNavLink(e) {
+  navLink.forEach((link) => {
+    if (link.contains(e.target)) {
+      removeMobileNav();
+    }
+  });
 }
 
 function setAria() {
@@ -36,3 +45,4 @@ openNav.addEventListener("click", navAction);
 closeNav.addEventListener("click", navAction);
 notmobile.addEventListener("change", removeMobileNav);
 body.addEventListener("click", bodyClicked);
+body.addEventListener("click", clickNavLink);
