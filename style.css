@@ -252,6 +252,39 @@ h2 {
 .client-card {
   padding: 1em;
 }
+.fq {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  flex-direction: column;
+  gap: 1.5em;
+  padding: 2em;
+}
+.fq-forms-chat {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+.fq input {
+  font-size: 16px;
+  background-color: var(--light-brown);
+  padding: 7px;
+  padding-inline-start: 1.3em;
+  border: 1px transparent;
+  margin-inline-end: 1em;
+  margin-block-end: 1em;
+  border-radius: 5px;
+}
+.input-field {
+  display: inline;
+  position: relative;
+}
+.input-field img {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
 
 @media (min-width: 32em) {
   header .menu {
