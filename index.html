@@ -318,15 +318,17 @@
               <img src="assets/icons/icons8-verified-account-96 1.png" alt="chat icon" />Browse our FAQ
             </div>
           </div>
-          <div class="fq-email">
-            <!-- <div class="input-field"> -->
-            <form novalidate>
-              <img src="assets/icons/email.png" alt="email icon" />
-              <input type="text" placeholder="Enter your email address... " />
-            </form>
-            <!-- </div> -->
-            <button class="primary-cta">Submit</button>
-          </div>
+
+          <form id="form" novalidate>
+            <div class="fq-email">
+              <span aria-hidden="true" aria-live="polite" aria-label="email" id="email-error"></span>
+              <div class="inputs">
+                <img src="assets/icons/email.png" alt="email icon" />
+                <input type="email" inputmode="email" id="email" placeholder="Enter your email address... " required />
+              </div>
+            </div>
+            <button type="submit" class="primary-cta">submit</button>
+          </form>
         </section>
       </div>
     </main>

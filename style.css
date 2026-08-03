@@ -255,12 +255,10 @@ h2 {
 .fq {
   display: flex;
   align-items: center;
-  text-align: center;
   flex-direction: column;
   gap: 1.5em;
-  padding: 2em;
 }
-form {
+.inputs {
   position: relative;
 }
 .fq-forms-chat {
@@ -274,12 +272,16 @@ form {
   background-color: var(--light-brown);
   padding: 7px;
   padding-inline-start: 1.3em;
-  border: 1px transparent;
   border-radius: 5px;
 }
-.fq-email {
+form {
   display: flex;
+  align-items: end;
   gap: 1em;
+}
+form span {
+  color: red;
+  padding-block-end: 1em;
 }
 form img {
   position: absolute;
@@ -335,7 +337,7 @@ form img {
   .second-section {
     display: flex;
     flex-direction: row-reverse;
-    /* padding: 1.5em; */
+    padding: 2em;
   }
 
   .section-text-wrapper {
@@ -348,4 +350,10 @@ form img {
 /* js style */
 .navigation-opened {
   transform: translateX(0vw);
+}
+.email-error {
+  border: 2px solid red;
+}
+.email-error:focus {
+  outline: 2px solid transparent;
 }
