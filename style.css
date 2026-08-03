@@ -88,8 +88,8 @@ nav a {
   font-size: clamp(1rem, 5vw, 1.2rem);
 }
 .primary-cta {
-  padding-block: 0.5em;
-  padding-inline: 0.9em;
+  padding-block: 0.6em;
+  padding-inline: 1em;
   border-radius: 8px;
   background-color: var(--brown);
   color: white;
@@ -260,6 +260,9 @@ h2 {
   gap: 1.5em;
   padding: 2em;
 }
+form {
+  position: relative;
+}
 .fq-forms-chat {
   display: flex;
   flex-direction: row;
@@ -272,15 +275,13 @@ h2 {
   padding: 7px;
   padding-inline-start: 1.3em;
   border: 1px transparent;
-  margin-inline-end: 1em;
-  margin-block-end: 1em;
   border-radius: 5px;
 }
-.input-field {
-  display: inline;
-  position: relative;
+.fq-email {
+  display: flex;
+  gap: 1em;
 }
-.input-field img {
+form img {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
@@ -334,7 +335,7 @@ h2 {
   .second-section {
     display: flex;
     flex-direction: row-reverse;
-    padding: 1.5em;
+    /* padding: 1.5em; */
   }
 
   .section-text-wrapper {
