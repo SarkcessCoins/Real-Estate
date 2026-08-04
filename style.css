@@ -327,7 +327,7 @@ footer h3 {
   }
   nav a {
     font-size: clamp(1rem, 2vw, 1.2rem);
-    padding-inline: clamp(1em, 3vw, 2em);
+    margin-inline: clamp(1em, 3vw, 2em);
   }
   header ul li,
   nav ul {
