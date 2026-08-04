@@ -64,6 +64,7 @@ function showError(errorText, errorAttribute) {
 }
 function ClearError() {
   form.reset();
+  error.textContent = "";
   email.classList.remove("email-error");
 }
 
