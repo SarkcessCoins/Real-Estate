@@ -32,7 +32,6 @@ img {
 }
 ul li {
   list-style: none;
-  /* margin-block-start: 2em; */
 }
 header ul li {
   margin-block-start: 2em;
@@ -42,6 +41,9 @@ a {
 }
 p {
   line-height: 1.5;
+  font-family: "Libre Caslon Text", serif;
+  font-weight: 400;
+  font-style: normal;
 }
 .hero p {
   padding-block: 1em;
@@ -239,6 +241,7 @@ h2 {
   align-items: center;
   padding-block-end: 10px;
 }
+
 .client-ratings {
   background-color: white;
   padding: 3px;
@@ -249,7 +252,9 @@ h2 {
   align-items: center;
 }
 .client-profile img {
-  border-radius: 50%;
+  border-radius: 100%;
+  width: 50px;
+  height: 50px;
 }
 .client-name {
   padding-block-end: 10px;
@@ -282,7 +287,7 @@ h2 {
 form {
   display: flex;
   align-items: end;
-  gap: 1em;
+  gap: 0.5em;
 }
 form span {
   color: red;
@@ -308,6 +313,10 @@ footer h3 {
 .second-group-ft-box {
   display: flex;
   justify-content: space-between;
+}
+.socials li a {
+  display: flex;
+  align-items: center;
 }
 @media (min-width: 32em) {
   header .menu {
