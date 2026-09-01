@@ -143,6 +143,9 @@ nav a {
   display: flex;
   justify-content: space-between;
 }
+.houses-number-wrapper h3 {
+  font-size: clamp(1rem, 5vw, 1.5rem);
+}
 
 .why-choose-us {
   text-align: center;
@@ -167,8 +170,13 @@ h2 {
   gap: 1.5em;
   padding-block-start: 1.5em;
 }
+.why-choose-offers p,
+.houses-number p,
+.what-people-say-container p {
+  font-size: clamp(0.9rem, 2vw, 1rem);
+}
 
-.card {
+.why-choose-offers .card {
   background-color: var(--light-brown);
   padding: 1.5em;
   border-radius: 0.5rem;
@@ -185,7 +193,7 @@ h2 {
   padding-block: 5px;
 }
 .why-choose-us h3 {
-  font-size: clamp(0.9rem, 2vw, 3rem);
+  font-size: clamp(1rem, 5vw, 1.5rem);
   font-weight: 800;
 }
 
